@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continued Fraction Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Continued Fraction Calculator</h1>
+        <p>Enter a real number to see its continued fraction representation.</p>
+        
+        <div class="input-group">
+            <input type="text" id="numberInput" placeholder="e.g. 3.14159 or 22/7" autofocus>
+            <button id="calculateBtn">Calculate</button>
+        </div>
+
+        <div id="result" class="result-container hidden">
+            <h2>Result</h2>
+            <div class="output-group">
+                <span class="label">Sequence:</span>
+                <span id="sequenceOutput" class="value"></span>
+            </div>
+            <div class="output-group">
+                <span class="label">Notation:</span>
+                <span id="notationOutput" class="value"></span>
+            </div>
+            <div class="output-group">
+                <span class="label">Visual:</span>
+                <div id="texOutput" class="value math-display"></div>
+            </div>
+            <div class="output-group">
+                <span class="label">Convergents (Approximations):</span>
+                <table id="convergentsTable" class="convergents-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Fraction</th>
+                            <th>Decimal Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <footer>
+            This page was written by Mark VandeWettering (mvandewettering@gmail.com) using Gemini CLI.
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
